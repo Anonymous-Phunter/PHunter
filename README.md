@@ -85,7 +85,7 @@ The selected CVEs in this work are listed as follow.
 |com.fasterxml.jackson.core:jackson-databind|  CVE-2019-17267, CVE-2020-8840<br>CVE-2021-20190, CVE-2019-14439<br>CVE-2018-11307, CVE-2019-14892<br>CVE-2020-36182, CVE-2018-19362<br>CVE-2018-19360, CVE-2019-14893<br>CVE-2017-17485, CVE-2018-5968<br>CVE-2019-12086, CVE-2018-12022<br>CVE-2018-19361|                    
 org.bouncycastle:bcprov-jdk15on|              CVE-2016-1000344, CVE-2016-1000341<br>CVE-2020-26939, CVE-2016-1000343<br>CVE-2018-1000613, CVE-2016-1000352<br>CVE-2016-1000345, CVE-2018-1000180<br>CVE-2020-28052, CVE-2016-1000346  
 ### **About ATVHunter**  
-**[com.adonai.manman.apk](https://github.com/PHunterISSTA/PHunter/blob/main/dataset/sample7/com.adonai.manman.apk)** in sample7 contains org.jsoup:jsoup:1.12.1, org.apache.commons:commons-compress:1.13 and com.squareup.okhttp3:okhttp:4.9.0.  
+**[com.adonai.manman.apk](samples/sample9/com.adonai.manman.apk)** in sample7 contains org.jsoup:jsoup:1.12.1, org.apache.commons:commons-compress:1.13 and com.squareup.okhttp3:okhttp:4.9.0.  
 <div align="center">    
 <img src="./figure/decompile.png" width=300>
 </div> 
