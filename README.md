@@ -37,7 +37,7 @@ java -jar ./PHunter.jar --preTPL samples/sample1/commons-compress-CVE-2018-1324-
 
 ## Supplementary Information
 ### **Tree Structure**
-Based on the Backus-Naur Form (BNF) of Jimple, we define the Type, Data of the Tree Structure in the tool.
+Based on the Backus-Naur Form (BNF) of Jimple, we define the ExprType, Data of the Tree Structure in the tool.
 |ExprType|Data|Children|Example|   
 |---|---|---|---|
 |Comparator|Comparator Symbols|two tree nodes, representing the left and right operands|">", ">=", "==", "!=", etc |
@@ -70,7 +70,7 @@ The selected CVEs in this work are listed as follow.
 |com.squareup.okhttp3:okhttp|                  CVE-2021-0341|                     
 |org.apache.httpcomponents:httpclient|         CVE-2015-5262, CVE-2014-3577|      
 |com.itextpdf:itextpdf|                        CVE-2017-9096|                     
-|com.github.junrar|                            CVE-2018-12418 |                   
+|com.github.junrar:junrar|                            CVE-2018-12418 |                   
 |com.google.guava:guava|                       CVE-2018-10237 |                   
 |com.caverock:androidsvg|                      CVE-2017-1000498|                 
 |io.netty:netty|                               CVE-2018-12418, CVE-2014-0193<br>CVE-2016-4970, CVE-2014-3488|      
