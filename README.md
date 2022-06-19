@@ -116,9 +116,9 @@ We also uploaded all 100 apps from dataset_1 to the site and the results are sho
 
 <center>Table 1. Comparison with ATVHunter</center>
 
-| Tools | Unobf(Acc) | Unobf(FPR) | Proguard(Acc) | Proguard(FPR) | DashO(Acc) | DashO(FPR) |
-|:------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-|PHunter|98.4%|0.6%|92.9%|7.0%|93.3%|1.7%|
-|ATVHunter|0%|100%|0%|100%|0%|100%|
+| Tools | No Obfuscation(Acc) |Proguard(Acc) | DashO(Acc) | 
+|:------:|:---------:|:---------:|:---------:|
+|PHunter|98.4%|92.9%|93.3%|
+|ATVHunter|0%|0%|0%|
 
 We confirmed with the authors that provided service might be problematic since they are commercializing it on the current moment. Therefore, we excluded the experimental results in our paper to avoid unfair comparisons.
