@@ -93,7 +93,7 @@ org.bouncycastle:bcprov-jdk15on|              CVE-2016-1000344, CVE-2016-1000341
 <img src="./figure/decompile.png" width=300>
 </div>
 
-We tried the online trial [sites](https://scantist.io) given in the paper: **ATVHunter: Reliable Version Detection of Third-Party Libraries for Vulnerability Identification in Android Applications**. The website reports that the app has 53 components, but the above 3 TPLs are not present among them. The following figures show the report on the website.
+We tried the online trial [sites](https://scantist.io) given in the paper: **ATVHunter: Reliable Version Detection of Third-Party Libraries for Vulnerability Identification in Android Applications**. The website reports that the app has 53 components and 11 vulnerablities, but the above 3 TPLs are not present among them. The following figures show the report on the website.
 <div>
 <div> The overview is:
               <img src="./figure/overview.jpg">
@@ -114,7 +114,8 @@ We tried the online trial [sites](https://scantist.io) given in the paper: **ATV
 <br/>
 We also uploaded all 100 apps from dataset_1 to the site and the results are shown in Table 1  
 
-<center>Table 1. Comparison with ATVHunter</center>
+<div align=center>Table 1. Comparison with ATVHunter</div>
+
 
 | Tools | No Obfuscation(Acc) |Proguard(Acc) | DashO(Acc) | 
 |:------:|:---------:|:---------:|:---------:|
