@@ -106,7 +106,7 @@ We tried the online trial [sites](https://scantist.io) given in the paper: **ATV
               <img src="./figure/report1.jpg">
        </div>
        <div>
-       The reported 11 Vulnerablities are:
+       The reported 11 vulnerablities are:
               <img src="./figure/vul.jpg">
        </div>
 </div>
