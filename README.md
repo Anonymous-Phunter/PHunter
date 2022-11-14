@@ -17,7 +17,7 @@ The mapping file records the mapping between origin identifiers and the renamed 
 To use PHunter, users should have pre-patch and post-patch third-party libraries(.jar/.aar), patch files(.diff), and app(.apk) to be tested.
 
 ```
-$ java -jar PHunter.jar
+$ java -jar PHunter.jar --help
 usage: help [-output <arg>] [-preTPL <arg>] [-enableDebug] [-postTPL <arg>] [-targetAPK <arg>]
        [-patchFiles <arg>] [-androidJar <arg>] [-threadNum <arg>] [-?]
 
@@ -59,15 +59,17 @@ Based on the Backus-Naur Form (BNF) of Jimple, we define the ExprType, Data of t
 <!-- |MultiArray|Type of the multiarray|several tree nodes, representing the size of each dimension|suppose a statement is "a[0] = new int[3][3]", its Data is "int[][]"| -->
 
 ### **Obfuscation Strategies**
-- Code Shrinking: removing unused code to reduce the size of programs.
+- ``Code Shrinking``: removing unused code to reduce the size of programs.
 
-- Package Flattening: breaking the original structure of the code hierarchy and repackaging classes from multiple packages into one.
+- `Package Flattening`: breaking the original structure of the code hierarchy and repackaging classes from multiple packages into one.
 
-- Identifier Renaming: renaming packages, classes, methods, and variables. For example, identifiers can be renamed into meaningless characters such as ``x`` and ``y``.
+- `Identifier Renaming`: renaming packages, classes, methods, and variables. For example, identifiers can be renamed into meaningless characters such as ``x`` and ``y``.
 
-- Control Flow Obfuscation: modifying the original Control Flow Graph (CFG) by inserting redundant control flows, variables and function calls, thus significantly increasing the difficulty of the reverse analysis while preserving the original semantics.
+- `Control Flow Obfuscation`: modifying the original Control Flow Graph (CFG) by inserting redundant control flows, variables and function calls, thus significantly increasing the difficulty of the reverse analysis while preserving the original semantics.
 
-- String Encryption: encrypting strings that appear in the code as meaningless strings. It protects sensitive information in the code, such as keys, email addresses, etc.
+- `String Encryption`: encrypting strings that appear in the code as meaningless strings. It protects sensitive information in the code, such as keys, email addresses, etc.
+
+
 
 ### The re-implementation of BinXray
 [BinXray](https://sites.google.com/view/submission-for-issta-2020) was originally designed for C/C++ and implemented in Python.
