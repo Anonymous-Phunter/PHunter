@@ -11,10 +11,10 @@ This repository currecntly contains the supplementary information of the paper, 
 The artifact is [PHunter.jar](PHunter.jar) and all required dependencies are already included.
 The sampled dataset with groundtruth is located at the folder: [samples](./samples).  
 
-You can also compile the source code by maven, the compiled artifact is located at `target/PHunter-1.1-jar-with-dependencies.jar`:
+You can also build the source code using maven, and the artifact is located at `target/PHunter-1.1-jar-with-dependencies.jar`:
 
 ```
-mvn clean compile assembly:single
+$ mvn clean compile assembly:single
 ```
 
 
@@ -40,9 +40,32 @@ usage: help [-output <arg>] [-preTPL <arg>] [-enableDebug] [-postTPL <arg>] [-ta
 ### Example
 
 ```
-java -jar ./PHunter.jar --preTPL samples/sample1/commons-compress-CVE-2018-1324-pre.jar --postTPL samples/sample1/commons-compress-CVE-2018-1324-post.jar --threadNum 10 --androidJar ./android-31/android.jar --patchFiles samples/sample1/CVE-2018-1324_2a2f1dc48e22a34ddb72321a4db211da91aa933b.diff --targetAPK samples/sample1/com.greenaddress.abcore.apk
+$ java -jar ./PHunter.jar --preTPL samples/sample1/commons-compress-CVE-2018-1324-pre.jar --postTPL samples/sample1/commons-compress-CVE-2018-1324-post.jar --threadNum 10 --androidJar ./android-31/android.jar --patchFiles samples/sample1/CVE-2018-1324_2a2f1dc48e22a34ddb72321a4db211da91aa933b.diff --targetAPK samples/sample1/com.greenaddress.abcore.apk
 ```
 
+The output will be shown in the terminal, which means the CVE patch is PRESENT in the target app:
+
+```
+[main] INFO analyze.BinaryAnalyzer - Analyzing the pre-patched binary samples/sample1/commons-compress-CVE-2018-1324-pre.jar
+Soot started on Fri Nov 18 01:08:28 CST 2022
+Soot finished on Fri Nov 18 01:08:43 CST 2022
+Soot has run for 0 min. 15 sec.
+[main] INFO analyze.BinaryAnalyzer - Analyzing the post-patched binary samples/sample1/commons-compress-CVE-2018-1324-post.jar
+Soot started on Fri Nov 18 01:08:44 CST 2022
+Soot finished on Fri Nov 18 01:08:58 CST 2022
+Soot has run for 0 min. 14 sec.
+[main] INFO analyze.ParsePatchFiles - Analyzing the patch samples/sample1/CVE-2018-1324_2a2f1dc48e22a34ddb72321a4db211da91aa933b.diff
+[main] INFO analyze.APKAnalyzer - Analyzing the apk samples/sample1/com.greenaddress.abcore.apk
+Soot started on Fri Nov 18 01:08:59 CST 2022
+Soot finished on Fri Nov 18 01:09:06 CST 2022
+Soot has run for 0 min. 7 sec.
+patch-related method count = 1
+[main] INFO analyze.PatchPresentTest_new - The matched pairs for pre-patch TPL and APP are:
+[main] INFO analyze.PatchPresentTest_new - <org.apache.commons.compress.archivers.zip.X0017_StrongEncryptionHeader: void parseCentralDirectoryFormat(byte[],int,int)>   <org.apache.commons.compress.archivers.zip.X0017_StrongEncryptionHeader: void parseCentralDirectoryFormat(byte[],int,int)>      0.843125
+[main] INFO analyze.PatchPresentTest_new - The matched pairs for post-patch TPL and APP are:
+[main] INFO analyze.PatchPresentTest_new - <org.apache.commons.compress.archivers.zip.X0017_StrongEncryptionHeader: void parseCentralDirectoryFormat(byte[],int,int)>   <org.apache.commons.compress.archivers.zip.X0017_StrongEncryptionHeader: void parseCentralDirectoryFormat(byte[],int,int)>      0.888264
+[main] INFO analyze.PatchPresentTest_new - the patch IS PRESENT, pre similarity=0.843125        post similarity=0.888264
+```
 ## Supplementary Information
 
 ### **Tree Structure**
