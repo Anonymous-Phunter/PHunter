@@ -11,8 +11,8 @@ This repository currecntly contains the supplementary information of the paper, 
 The artifact is [PHunter.jar](PHunter.jar) and all required dependencies are already included.
 The sampled dataset with groundtruth is located at the folder: [samples](./samples).  
 
-You can also build the source code using maven, and the artifact is located at `target/PHunter-1.1-jar-with-dependencies.jar`:
-The java version should be 8 or 11 currently, using java 17 will encounter a NullPointerException.
+You can also build the source code using maven.
+Note that the Java version should be 8 or 11 currently, using Java 17 will encounter a NullPointerException. The artifact will be located at `target/PHunter-1.1-jar-with-dependencies.jar`.
 ```
 $ mvn clean compile assembly:single
 ```
