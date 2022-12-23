@@ -6,6 +6,35 @@ This repository currecntly contains the supplementary information of the paper, 
 
 **Be noted that we will release the complete dataset once the paper is accepted.**
 
+## **About ATVHunter**  
+
+
+We have tried the online trial [sites](https://scantist.io) given in the paper: **ATVHunter: Reliable Version Detection of Third-Party Libraries for Vulnerability Identification in Android Applications**. The free trial is unavailable now.
+
+We have uploaded an apk **[com.adonai.manman.apk](com.adonai.manman.apk)** that contains 3 TPLs: org.jsoup:jsoup:1.12.1, org.apache.commons:commons-compress:1.13 and com.squareup.okhttp3:okhttp:4.9.0. The decompiled figure is:
+<div align="center">
+<img src="./figure/decompile.png" width=300>
+</div>
+The website reports that the app has 53 components and 11 vulnerabilities, but the above 3 TPLs are not present among them. The following figures show the reports on the website.
+<div>
+<div> The overview is:
+              <img src="./figure/overview.jpg">
+       </div>
+       <div>
+       The reported 53 components are:
+              <img src="./figure/report2.jpg">
+       </div>
+       <div>
+              <img src="./figure/report1.jpg">
+       </div>
+       <div>
+       The reported 11 vulnerabilities are:
+              <img src="./figure/vul.jpg">
+       </div>
+</div>
+<br/>
+<br/>
+
 ## Artifact usage
 
 The artifact is [PHunter.jar](PHunter.jar) and all required dependencies are already included.
